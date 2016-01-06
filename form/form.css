@@ -1,0 +1,8 @@
+.glyphicon-ok,
+.glyphicon-remove {
+    display: none;
+}
+
+body {
+    background-image: url("h2.jpg");
+}

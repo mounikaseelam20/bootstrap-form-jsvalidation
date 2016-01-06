@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type="text/javascript" src="form.js"></script>
+    <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-xs-3">
+                <img src="l.jpg" width="50px" height="50px" />
+            </div>
+            <div class="col-xs-6">
+                <h1>Bootstrap Design</h1>
+            </div>
+            <div class="col-xs-3">
+                <h3>Bootstrap</h3></div>
+        </div>
+        <hr/>
+        <div class="form">
+            <h3>mounika</h3>
+            <form class="form-horizontal" onsubmit="fndetails()">
+                <div class="form-group">
+                    <label for="userName" class="col-xs-4 control-label">Name:</label>
+                    <div class="col-xs-6 has-feedback row" id="name">
+                        <input type="text" class="form-control  " id="userName" placeholder="name" required pattern="[A-Za-z]{2,20}" oninput="fnname()" title="enter only charecters">
+                        <span id="ucorrect" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                        <span id="uincorrect" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group" onsubmit="fndetails()">
+                    <div class="form-inline">
+                        <label class="col-xs-4 control-label">Amount:</label>
+                        <div class="input-group col-xs-6" id="amt">
+                            <span class="input-group-addon">$</span>
+                            <input type="text" class="form-control " id="amount" placeholder="Amount" required oninput="fnamount()" min="1" title="amount should be > 0">
+                            <span class="input-group-addon">.00</span>
+                            <span id="aincorrect" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                            <span id="acorrect" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="iPassword" class="col-xs-4 control-label">Password:</label>
+                    <div class="col-xs-6 has-feedback row" id="pw">
+                        <input type="password" class="form-control" id="password" placeholder="Password" required oninput="fnpassword()" pattern=".{10,}" title="should contain length atleast 10">
+                        <span id="pincorrect" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <span id="pcorrect" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="radio-inline col-xs-offset-4 ">
+                        <input type="radio" name="radioOptions" id="iRadio1" value="option1" required> savings
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="radioOptions" id="iRadio2" value="option2" required oninput="fnform()"> current
+                    </label>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-offset-4">
+                        <button type="submit" class="btn ">Submit</button>&nbsp;
+                        <button type="reset" class="btn ">reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr/>
+        <div class="footer ">
+            <div class="col-xs-7">&#169;Copyright</div>
+            <div class="col-xs-3">About</div>
+            <div class="col-xs-2">ContactUs</div>
+        </div>
+    </div>
+</body>
+
+</html>
